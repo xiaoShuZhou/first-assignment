@@ -8,6 +8,7 @@ Create an e-commerce website
 
 1. Git/GitHub
 
+- create a simple `README` file to introduce yourself
 - submit the assignment by open a pull request (PR)
 - make the repository public
 - add label to your PR
