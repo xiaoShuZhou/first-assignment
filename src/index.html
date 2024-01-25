@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>E-commerce</title>
-  <link rel="stylesheet" href="myStyle.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
   <!-- Main Heading -->
   <h1>Welcome to Our E-commerce Store</h1>
 
@@ -23,37 +22,35 @@
       </ul>
     </nav>
 
+    <table border="1">
+      <tr>
+        <th>Offer</th>
+        <th>Description</th>
+        <th>Validity</th>
+      </tr>
+      <tr>
+        <td>Summer Sale</td>
+        <td>50% off on all summer wear</td>
+        <td>June 1 - August 31</td>
+      </tr>
+    </table>
   <!-- Section for Featured Products -->
+  <h2>Featured Products</h2>
   <section>
-    <h2>Featured Products</h2>
     <article>
       <h3>Product 1</h3>
+      <img src="shirts1.jpeg" alt="Product 1" />
       <p>This is an <i>amazing product</i> you should buy.</p>
       <a href="product1.html">More Details</a>
     </article>
     <article>
       <h3>Product 2</h3>
+      <img src="shoe.jpeg" alt="Product 2" />
       <p>Check out this <i>incredible item</i>.</p>
       <a href="product2.html">More Details</a>
     </article>
   </section>
 
-
-
-  <!-- Table of Offers -->
-  <table border="1">
-    <tr>
-      <th>Offer</th>
-      <th>Description</th>
-      <th>Validity</th>
-    </tr>
-    <tr>
-      <td>Summer Sale</td>
-      <td>50% off on all summer wear</td>
-      <td>June 1 - August 31</td>
-    </tr>
-    <!-- Other rows can be added here -->
-  </table>
 
   <!-- Customer Feedback Form -->
   <form action="feedback.php" method="post">
@@ -64,19 +61,18 @@
     <input type="submit" value="Submit Feedback">
   </form>
 
-  <!-- Contact Information -->
-  <address>
-    Contact us: <a href="mailto:info@ecommerce.com">info@ecommerce.com</a>
-  </address>
-
-  <!-- Audio Advertisement or Message -->
-  <audio controls>
-    <source src="audio/advertisement.mp3" type="audio/mpeg">
-    Your browser does not support the audio tag.
-  </audio>
 
   <!-- Footer Section -->
   <footer>
+    <address>
+      Contact us: <a href="mailto:info@ecommerce.com">info@ecommerce.com</a>
+    </address>
+  
+    <!-- Audio Advertisement or Message -->
+    <audio controls>
+      <source src="birthday.mp3" type="audio/mpeg">
+      Your browser does not support the audio tag.
+    </audio>
     <p>&copy; 2024 E-commerce Store</p>
   </footer>
 

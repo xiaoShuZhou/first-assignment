@@ -1,1 +1,155 @@
-// scss code here
+// Import variables and mixins
+@use 'variables';
+@use 'mixins';
+
+body {
+  font-family: variables.$font-stack;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+// Main heading
+h1 {
+  text-align: center;
+  color: variables.$primary-color;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret 0.75s step-end infinite;
+}
+
+
+// Navigation styling
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: variables.$secondary-color;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li a {
+  display: block;
+  padding: 0.5em;
+  color: white;
+  text-decoration: none;
+  @include mixins.active-link;
+
+  @include mixins.respond-to(mobile) {
+    padding: 0.3em;
+  }
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: variables.$primary-color;
+}
+// Featured products
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+article {
+  flex: 1 1 300px; // Allows wrapping and flexible sizing
+  margin: 10px;
+  text-align: center;
+}
+
+// Table styling
+// Table Styling
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+
+  th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  th {
+    background-color: variables.$primary-color;
+    color: white;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  tr:hover {
+    background-color: #ddd;
+  }
+}
+
+
+// Form styling
+// Form Styling
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  background: #fff;
+
+  label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  input[type="submit"] {
+    background-color: variables.$primary-color;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken(variables.$primary-color, 10%);
+    }
+  }
+}
+
+
+// Footer styling
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: variables.$secondary-color;
+  color: white;
+}

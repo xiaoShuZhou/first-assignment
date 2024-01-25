@@ -1,0 +1,24 @@
+@use 'variables';
+// Mixins for responsive design and animations
+@mixin respond-to($media) {
+  @if $media == mobile {
+    @media (max-width: variables.$breakpoint-mobile) { @content; }
+  } @else if $media == tablet {
+    @media (max-width: variables.$breakpoint-tablet) { @content; }
+  } @else if $media == desktop {
+    @media (max-width: variables.$breakpoint-desktop) { @content; }
+  }
+}
+
+@mixin button-hover {
+  &:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+  }
+}
+
+@mixin active-link {
+  &:active {
+    color: darken(variables.$primary-color, 10%);
+  }
+}
